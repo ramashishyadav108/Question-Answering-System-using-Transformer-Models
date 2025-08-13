@@ -10,7 +10,7 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     context =  request.form.get('context')
-    question = request.form.get('question')
+    question =  request.form.get('question')
     prediction = model_predict(context, question)
     return render_template("index.html", prediction=prediction, 
                            context=context, question = question)
