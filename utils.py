@@ -7,7 +7,7 @@ tokenizer = AutoTokenizer.from_pretrained("tokenizer")
 accelerator = Accelerator()
 
 
-def model_predict(context, question):
+def model_predict(context,question):
     inputs = tokenizer.encode_plus(question, context, return_tensors="pt")
     # print("inputs", inputs)
     # print("inputs", type(inputs))
